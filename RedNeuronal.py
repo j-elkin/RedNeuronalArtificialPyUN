@@ -8,8 +8,9 @@
 #Santiago Cespedes Zapata
 #Alejandra Quinonez
 
-def feedforward(self, entradas):
-    #Propaga las entradas desde la capa de entrada hasta la capa de salida
+""" Propaga las entradas desde la capa de entrada hasta la capa de salida  """
+def feedforward(self, x):
+   
     longVector=len(x)
     x.shape=(longVector,1)
     self.entradas[0]=x
@@ -20,9 +21,9 @@ def feedforward(self, entradas):
         
     return self.salidas[-1]
     
+""" Actualiza la matriz de pesos para cada capa, basada en una sola entrada X y salida esperada Y """    
 def actualizacion_pesos(self, x,y):
-    #Actualiza la matriz de pesos para cada capa, basada en una sola entrada x y salida esperada y
-    
+        
     #Obtiene la salida de mover las entradas por toda la red
     salida = self.feedforward(x)
     #calcula el error para la salida
