@@ -8,4 +8,5 @@
 #Santiago Cespedes Zapata
 #Alejandra Quinonez
 
+print "John's first commit"
 
